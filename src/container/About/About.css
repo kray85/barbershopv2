@@ -1,0 +1,48 @@
+
+
+  /* About Section */
+.about {
+  margin-bottom: 100px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.about-info {
+  color: var(--white-text);
+  flex-basis: 50%;
+  margin-top: 70px;
+}
+
+.about-info span {
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--orange-brown);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-info h2 {
+  font-size: 2.3rem;
+  margin-top: 15px;
+  color: var(--very-dark-gray);
+}
+
+.about-info p {
+  font-size: 0.889rem;
+  margin-top: 25px;
+  color: var(--very-dark-gray);
+  font-weight: 600;
+  line-height: 1.8;
+}
+.about-image {
+  margin-top: 100px;
+  flex-basis: 50%;
+}
+.about-image img {
+  width: 500px;
+  height: 800px;
+}

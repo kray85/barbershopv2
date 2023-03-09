@@ -1,0 +1,148 @@
+.team {
+    background-color: var(--secondary-black);
+  }
+  .team .container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-black);
+    height: auto;
+  }
+  
+  .container .section-heading {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    font-size: 1.8rem;
+  }
+  .container .section-heading span {
+    color: var(--color-gold);
+    text-align: center;
+  }
+  
+  .container .section-heading h2 {
+    text-transform: uppercase;
+  }
+  
+  .team-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+  }
+  
+  .container .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .selected {
+    border: 5px solid var(--orange-brown);
+  }
+  
+  .thumbnail img {
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+  }
+
+  .team-preview .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+  }
+  
+  .team-preview .wrapper .left .image-preview img{
+    background-image:url('../../assets/barber1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+  }
+
+  .team-preview .wrapper .right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .wrapper .right .team-bio {
+    max-width: 60%;
+    margin-right: 1.8rem;
+  }
+  
+  .wrapper .right .team-bio h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: "Barlow Condensed", sans-serif;
+    line-height: 1.5;
+  }
+  
+  .wrapper .right .team-bio p {
+    margin-bottom: 1rem;
+    display: block;
+    line-height: 1.8;
+    font-size: 0.889rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-family: var(--Poppins);
+    color: var(--color-smoke-gray);
+  }
+  
+  .wrapper .right .team-services h4 {
+    margin-top: -130px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-family: var(--Barlow-Condensed);
+    line-height: 1.5;
+  }
+  
+  .wrapper .right .team-services ul {
+    font-family: var(--Barlow-Condensed);
+    color: var(--color-smoke-gray);
+    display: block;
+    margin-bottom: 0.3rem;
+    margin-left: 30px;
+  }
+
+  .wrapper .right .social-media {
+    display: flex;
+  }
+  .wrapper .right .social-media a i {
+    width: 40px;
+    height: 40px;
+    background: var(--orange-brown);
+    margin-right: 7px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wrapper .right .team-bio p {
+    margin-top: 1.6rem;
+  }
+  
+  .wrapper .right .team-bio p a {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.7889rem;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+    color: var(--white-text);
+    background-color: var(--orange-brown);
+  }
+  
+  .wrapper .right .team-bio p a:hover {
+    background-color: var(--color-gold);
+  }

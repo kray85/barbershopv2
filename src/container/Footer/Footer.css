@@ -1,0 +1,33 @@
+/* Footer */
+.footer-container {
+  background-color: var(--white-text);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links .link {
+  padding: 2rem 10px;
+}
+
+
+.social-links .link a {
+  color: var(--orange-brown);
+}
+
+.social-links .link a:hover {
+  color: #00f;
+}
+
+.copyright {
+  padding: 0 0 2rem;
+  font-size: .8rem;
+  color: var(--color-hsl-brown);
+}
