@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { client } from "../../client";
+import React, { useState, useEffect } from 'react';
+import { client } from '../../client';
+import { BeatLoader } from 'react-spinners';
 
-import "./Team.css";
-import { images } from "../../constants";
+import './Team.css';
+import { images } from '../../constants';
+import BounceLoader from 'react-spinners/BounceLoader';
 
 const teamData = `*[_type == "barber"]{
   name,
@@ -51,24 +53,36 @@ const Team = ({ id }) => {
       .catch(console.error);
   }, [id]);
 
-  if (!barbers) return <div>Loading...</div>;
+  if (!barbers)
+    return (
+      <div className='bounceLoader'>
+        <BeatLoader
+          className='bounceLoader'
+          loading
+          size={25}
+        />
+      </div>
+    );
 
   return (
     <div>
-      {" "}
-      <section id="team" className="team">
-        <div className="container">
-          <div className="section-heading">
+      {' '}
+      <section
+        id='team'
+        className='team'
+      >
+        <div className='container'>
+          <div className='section-heading'>
             <span>Team</span>
             <h2>
               Meet <span>the</span> Team
             </h2>
           </div>
-          <div className="wrapper">
+          <div className='wrapper'>
             {barbers.map((barber, index) => (
               <div key={index}>
                 <div
-                  className="thumbnail"
+                  className='thumbnail'
                   onClick={() => setSelectedBarber(barber)}
                 >
                   <img
@@ -80,29 +94,29 @@ const Team = ({ id }) => {
             ))}
           </div>
           {selectedBarber && (
-            <div className="team-preview">
-              <div className="wrapper">
-                <div className="left">
-                  <div className="image-preview">
+            <div className='team-preview'>
+              <div className='wrapper'>
+                <div className='left'>
+                  <div className='image-preview'>
                     <img
                       src={selectedBarber?.profilePicture?.asset?.url}
-                      alt="preview"
+                      alt='preview'
                     />
                   </div>
                 </div>
 
-                <div className="right">
-                  <div className="team-bio">
+                <div className='right'>
+                  <div className='team-bio'>
                     <h3>{selectedBarber.name}</h3>
                     <p>{selectedBarber.bio}</p>
-                    <div className="social-media">
+                    <div className='social-media'>
                       {selectedBarber.socialMediaLinks &&
                         selectedBarber.socialMediaLinks.map((link) => (
                           <a
                             href={link.link}
                             key={link._key}
-                            target="_blank"
-                            rel="noreferrer"
+                            target='_blank'
+                            rel='noreferrer'
                           >
                             <i className={`fa-brands fa-${link.name}`}></i>
                           </a>
@@ -110,15 +124,15 @@ const Team = ({ id }) => {
                     </div>
                     <p>
                       <a
-                        href="https://booking.setmore.com/scheduleappointment/21879660-cb8a-47c8-8e45-6db97d24c41c"
-                        target="_blank"
-                        rel="noreferrer"
+                        href='https://booking.setmore.com/scheduleappointment/21879660-cb8a-47c8-8e45-6db97d24c41c'
+                        target='_blank'
+                        rel='noreferrer'
                       >
                         Book Appointment
                       </a>
                     </p>
                   </div>
-                  <div className="team-services">
+                  <div className='team-services'>
                     <h4>List of Services</h4>
                     <ul>
                       {selectedBarber.services.map((service) => (
