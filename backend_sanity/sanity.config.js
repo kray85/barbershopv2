@@ -3,12 +3,15 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
+const projectId = process.env.REACT_APP_SANITY_PROJECT_ID
+const dataset = process.env.REACT_APP_SANITY_DATASET
+
 export default defineConfig({
-  name: 'default',
+  name: 'BarberShop',
   title: 'Barbershopv2',
 
-  projectId: '6kwm3c5e',
-  dataset: 'production',
+  projectId,
+  dataset,
 
   plugins: [deskTool(), visionTool()],
 

@@ -5,4 +5,4 @@ import Team from './Team/Team';
 import Photogallery from './Photogallery/Photogallery';
 import Services from './Services/Services';
 
-export { Hero, About, Footer, Team, Photogallery, Services };
+export { Hero, About, Footer, Team, Photogallery, Services};

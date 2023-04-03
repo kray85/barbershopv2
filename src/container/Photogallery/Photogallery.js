@@ -7,9 +7,9 @@ import { images } from "../../constants";
 const Photogallery = () => {
 
   return (
-    <section id="photogallery" class="photogallery">
-      <div class="container">
-        <div class="header">
+    <section id="photogallery" className="photogallery">
+      <div className="container">
+        <div className="header">
           <h1>Photo Gallery</h1>
         </div>
         <div className="gallery">

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
 
 :root {
   --primary-color: #4e3620;
@@ -14,8 +14,8 @@
   --color-smoke-gray: #666;
   --dark-shade-brown: #482f21;
   --shade-gray: #99897f;
-  --Barlow-Condensed: 'Barlow Condensed', sans-serif;
-  --Poppins: 'Poppins', sans-serif;
+  --Barlow-Condensed: "Barlow Condensed", sans-serif;
+  --Poppins: "Poppins", sans-serif;
 }
 
 * {
@@ -23,10 +23,11 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  list-style: none;
 }
 
 html {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: 18px;
 }
 body {
@@ -43,27 +44,14 @@ a {
   html {
     font-size: 16px;
   }
-  .navbar .toggle_btn {
-    display: block;
-  }
-  .dropdown_menu {
-    width: 93%;
-  }
-  .dropdown_menu.open {
-    height: 210px;
-    margin-top: 50px;
-    z-index: 2;
-    font-size: 1.5rem;
-    height: auto;
-  }
-  .dropdown_menu {
-    display: block;
-  }
-  .navbar .links {
-    display: none;
-  }
+  
+
   #hero {
     background-position: right;
+  }
+
+ .info {
+    margin-top: 6rem;
   }
   .list {
     grid-template-columns: 1fr;
@@ -72,9 +60,8 @@ a {
     max-width: 70%;
   }
 
-  .team-preview .wrapper .team-services h4 {
-    font-size: 0.749rem;
-    margin-top: -105px;
+  .team-preview .wrapper .team-services {
+    display: none;
   }
   .team-preview .wrapper .team-bio h3 {
     font-size: 1.26rem;
@@ -82,10 +69,10 @@ a {
   .wrapper .right .team-bio p {
     margin-top: 1rem;
   }
-  .team-preview .right .social-media a i {
-    width: 20px;
-    height: 20px;
-  }
+  /* .team-preview .right .social-media a i {
+    width: 40px;
+    height: 40px;
+  } */
 
   .wrapper .right .team-bio p a {
     padding: 5px 10px;
@@ -141,13 +128,28 @@ a {
     width: 200px;
     height: 200px;
   }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .right .team-bio {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: -15%;
+  }
   .wrapper .right .team-bio p {
-    text-align: left;
+    text-align: center;
   }
   .wrapper .right .team-bio p a {
     padding: 5px 10px;
     display: flex;
     justify-content: center;
+  }
+
+  .team-preview .wrapper .team-services {
+    display: none;
   }
 
   .card-image {
@@ -185,6 +187,14 @@ a {
   html {
     font-size: 9px;
   }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: block;
+  }
   .dropdown_menu {
     left: 2rem;
     width: unset;
@@ -216,6 +226,9 @@ a {
     max-width: 100%;
     text-align: left;
   }
+  .wrapper .right .team-bio {
+    margin-top: 5px;
+  }
 
   .container .info a {
     font-size: 1.2rem;
@@ -230,7 +243,7 @@ a {
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-top: 11.5rem;
+    margin-top: 112.5rem;
   }
 
   .team-preview .wrapper .team-services h4 {

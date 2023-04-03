@@ -38,7 +38,7 @@
     border-radius: 50%;
     background-color: white;
     position: absolute;
-    top: -60px;
+    top: 10px;
     left: calc(50% - 80px);
     display: flex;
     justify-content: center;

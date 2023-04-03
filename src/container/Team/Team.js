@@ -9,6 +9,7 @@ import BounceLoader from 'react-spinners/BounceLoader';
 const teamData = `*[_type == "barber"]{
   name,
   bio,
+  barberLink,
   socialMediaLinks[]{
     ...,
     _type == "instagram" => {
@@ -86,7 +87,7 @@ const Team = ({ id }) => {
                   onClick={() => setSelectedBarber(barber)}
                 >
                   <img
-                    src={barber.profilePicture.asset.url}
+                    src={barber.profilePicture.asset.url ?? images.barber1}
                     alt={barber.name}
                   />
                 </div>
@@ -98,10 +99,10 @@ const Team = ({ id }) => {
               <div className='wrapper'>
                 <div className='left'>
                   <div className='image-preview'>
-                    <img
+                    {<img
                       src={selectedBarber?.profilePicture?.asset?.url}
                       alt='preview'
-                    />
+                    />}
                   </div>
                 </div>
 
@@ -124,7 +125,7 @@ const Team = ({ id }) => {
                     </div>
                     <p>
                       <a
-                        href='https://booking.setmore.com/scheduleappointment/21879660-cb8a-47c8-8e45-6db97d24c41c'
+                        href={selectedBarber.barberLink}
                         target='_blank'
                         rel='noreferrer'
                       >

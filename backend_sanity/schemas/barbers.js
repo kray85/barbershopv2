@@ -16,6 +16,11 @@ export default {
       type: 'text'
     },
     {
+      name: 'barberLink',
+      title: 'Barber Link',
+      type: 'url'
+    },
+    {
       name: 'socialMediaLinks',
       title: 'Social Media Links',
       type: 'array',
